@@ -1,15 +1,7 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#153d39"><meta name="description" content="生達產品仿單與問答查詢：依品名、成分、關鍵字及問答分類搜尋，保留原始來源與仿單依據。"><title>仿單資料查詢｜互動查詢</title>
-<style>.platform-nav{background:#fff;border-bottom:1px solid var(--line)}
-.platform-nav-inner{max-width:1328px;margin:0 auto;padding:12px 40px}
-.platform-back{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:9px 16px;border:1px solid #173e63;border-radius:6px;background:#173e63;color:#fff;font-size:14px;font-weight:700;line-height:1.5;box-shadow:0 2px 5px #173e6326}
-.platform-back:hover{background:#102f4d;border-color:#102f4d;color:#fff;text-decoration:none}
-.platform-back:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-@media(max-width:1099px){.platform-nav-inner{padding:12px 30px}}
-@media(max-width:599px){.platform-nav-inner{padding:10px max(20px,env(safe-area-inset-left,0px))}}
-@media print{.platform-nav{display:none!important}}
-:root{
+<style>:root{
   color-scheme:light;
   --ink:#173e39;--muted:#60736e;--green:#1b6256;--bg:#f5f6f2;
   --line:#dce5df;--soft:#edf3ee;--gold:#b59a63;
@@ -146,9 +138,6 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin
 @media print{header,.search-panel,.catalog,.actions,.section-head button,.faq-footer,.compare-tray,footer{display:none!important}.wrap{padding:0;max-width:none}.layout{display:block}.product-panel,.faq{box-shadow:none;border:1px solid #bbb;break-inside:avoid}.faq-body{display:block!important}body{background:white;color:black}.faq:not([open]){display:none}dialog{position:static;max-width:none;width:100%;max-height:none}dialog::backdrop{display:none}}
 </style></head>
 <body>
-<nav class="platform-nav" aria-label="返回營一數位平台">
-  <div class="platform-nav-inner"><a class="platform-back" href="https://product-learning-lite-2026.jacky5968.chatgpt.site/"><span aria-hidden="true">←</span> 返回營一數位平台</a></div>
-</nav>
 <header><div class="topbar"><div class="brand"><div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2h11l6 6v22H5V2h1Z"/><path d="M17 2v7h6M9 15h10M9 20h10M9 25h6"/></svg></div><div><div class="eyebrow">PRODUCT REFERENCE LIBRARY</div><div class="brand-title">生達・仿單資料查詢</div></div></div></div></header>
 <main class="wrap">
 <section class="search-panel" aria-label="查詢條件"><div class="query-inputs"><div class="query-field"><label for="search"><span class="step">1</span> 商品名或成分名</label><div class="search-box"><span class="search-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></span><input type="search" id="search" aria-label="商品名或成分名" placeholder="例如：Atorva、立舒脂、Atorvastatin" autocomplete="off" aria-describedby="nameSuggestions"></div><div id="nameSuggestions" class="suggestions" aria-live="polite"></div></div><div class="query-field"><label for="question"><span class="step">2</span> 問題</label><div class="search-box"><span class="search-icon" aria-hidden="true">?</span><input type="search" id="question" aria-label="問題" placeholder="例如：懷孕、腎功能、可以剝半嗎" autocomplete="off" aria-describedby="questionSuggestions"></div><div id="questionSuggestions" class="suggestions" aria-live="polite"></div></div></div><div class="quick"><span>常用問題</span><button class="chip" data-query="用法用量">用法用量</button><button class="chip" data-query="腎功能是否需調整劑量">腎功能</button><button class="chip" data-query="肝功能是否需調整劑量">肝功能</button><button class="chip" data-query="錠劑可否剝半">可否剝半</button><button class="chip" data-query="藥物交互作用">交互作用</button></div><div class="query-confirmation"><div id="queryPreview" class="query-preview" aria-live="polite">請輸入商品名或成分名，以及想查詢的問題。</div><div class="query-actions"><button class="btn primary" id="confirmQuery" disabled>查詢</button><button class="btn" id="reset">清除</button></div></div><div class="query-tools"><p id="queryHint" class="minor-note" role="status">確認下方建議的品項與問法，再按「查詢」。</p><button class="btn small" id="favorites" aria-pressed="false">☆ 我的收藏</button><button class="text-btn" id="refresh">更新資料</button></div></section>
